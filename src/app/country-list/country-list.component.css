@@ -1,0 +1,6 @@
+.country .name {
+  color: #0690f0;
+}
+.country .population small {
+  font-size: 60%;
+}

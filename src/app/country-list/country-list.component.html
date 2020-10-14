@@ -1,0 +1,25 @@
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <input type="text" id="keyword-field" class="form-control mb-4 form-control-lg" #keyword (input)=getFilteredCountries(keyword.value) placeholder="Search country..">
+          
+            <div class="country card mb-2 p-3" *ngFor="let country of filteredCountries">
+                <div class="row">
+                    <div class="col-8">
+                        <h6 class="name">{{ country.name }}</h6>
+                        <p class="detail mb-0"><strong>{{ !!country.capital? country.capital:'-' }},</strong> {{ !!country.subregion? country.subregion:'-' }}</p>
+                    </div>
+                    <div class="col-4 text-right">
+                        <div class="population">
+                            <small>Population</small>
+                            <div>
+                                {{ country.population }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
